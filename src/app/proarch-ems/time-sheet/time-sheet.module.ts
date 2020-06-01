@@ -6,10 +6,11 @@ import { NbCardModule, NbIconModule, NbInputModule, NbTreeGridModule } from '@ne
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 import { ThemeModule } from '../../@theme/theme.module';
+import { TableComponent } from './table/table.component';
 
 
 @NgModule({
-  declarations: [TimeSheetComponent],
+  declarations: [TimeSheetComponent, TableComponent],
   imports: [
     CommonModule,
     TimeSheetRoutingModule,
