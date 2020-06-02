@@ -1,0 +1,23 @@
+<ng-template #form>
+  <div class="p-4">
+
+        <input type="text" class="form-control"   [(ngModel)]="resultValue" (keyup.enter)="updatedValue(resultValue)" placeholder="Recipients">
+
+
+
+  </div>
+</ng-template>
+<p [nbPopover]="form" *ngIf="isEditable" nbPopoverTrigger="hover" nbPopoverPlacement="bottom" (click)="togelEditable()">{{resultValue}}</p>
+
+
+<ng-template #card>
+  <nb-card class="popover-card">
+    <nb-card-header status="warning">
+      Hello!
+    </nb-card-header>
+    <nb-card-body>
+      {{resultValue}}
+    </nb-card-body>
+  </nb-card>
+</ng-template>
+<p [nbPopover]="card" *ngIf="!isEditable" nbPopoverTrigger="hover" nbPopoverPlacement="bottom" (click)="togelEditable()">12 {{resultValue}}</p>
